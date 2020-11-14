@@ -1,0 +1,18 @@
+@media print{
+	margin: 1cm;
+	#LeftDiv{display:none;}
+	#TopHeader{display:fixed;}
+	#LeftMenuButton{display:none;}
+	#Footer{display:none;}
+	#MainContent{height:auto;width:100%;padding:5%;overflow:continuous;display:block;position:static;}
+	#MainContentEnlarged{display:block;position:static;}
+#LeftMenu{display:none;}
+
+#LeftDiv::-webkit-scrollbar,#MainContent::-webkit-scrollbar,#MainContentEnlarged::-webkit-scrollbar {
+  width: 0;
+  
+}
+#TopHeader{
+	
+}
+}
