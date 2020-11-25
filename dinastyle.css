@@ -1,14 +1,40 @@
-
+ 
 /*
 ScrollBar
 */
 
 /*
 Content
+
 */
+#YouTubeSolution{position:fixed;height:40%;bottom:2%;right:2%;border:0.5px solid black;}
+@media screen and (max-width: 400px){
+	#YouTubeSolution{bottom:2%;height:32%;width:96%;right:2%;}
+}
+#videoWrapper {
+	padding-bottom:62.25%;
+}
+#videoWrapper iframe{
+	
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.VideoSolutionButton{
+	padding:3%;
+	background-color:yellow;
+	text-align:center;
+	color:black;
+}
+
+.VideoSolutionButton:hover{
+	border:1px solid black;
+}
+
 
 #MainContent {
-    font-family: 'Roboto', sans-serif;font-size: 22px;
+    font-family: 'Roboto', sans-serif;font-size: 19px;
 	padding:2%;
 	position: absolute;
 	left:20%;
@@ -37,11 +63,11 @@ Content
 	bottom:0%;
 	overflow:scroll;
 }
-
+.YouTubeSolution{height:70%;}
 }
-.LeftMenuListItemText{font-size:1.5vw;text-align:center;}
+.LeftMenuListItemText{text-align:center;}
 @media screen and (max-width: 900px){
-	
+	#LeftMiniContent{font-size:15px;}
 	#LeftDiv{
 	width:20%;
 	position:absolute;
@@ -50,13 +76,21 @@ Content
 	bottom:0%;
 	overflow:scroll;
 }
+#MainContent{font-size:;}
 }
+@media screen and (max-width:800px){
+	#LeftMiniContent{font-size:20px;}
+	.LeftMenuListItemText{font-size:15px;text-align:center;}
+#MainContent{font-size: ;}
+}
+
 @media screen and (max-width: 700px) {
-	.LeftMenuListItemText{font-size:3vw;text-align:center;}
+	#LeftMiniContent{font-size:25px;}
+	.LeftMenuListItemText{font-size:25px;text-align:center;}
   #MainContent {
   position:static;
   width: 100%;
-  margin: 1px 1px 1px; padding:2%; font-size: 18px;
+  margin: 1px 1px 1px; padding:2%; font-size: ;
   order:1;
   }
   #MainContentEnlarged{}
@@ -64,7 +98,7 @@ Content
   #BigContent{font-size: 25px;}
   #LeftDiv{width:100%;
   position:absolute;
-	background-color:#F0EBF4;
+	background-color:#ffff66;
 	display:hidden;
 	bottom:0%;
 	overflow:scroll;
@@ -118,9 +152,11 @@ Content
   transform: translate(-50%, -50%);
 } */
 #LeftMiniContent{
+	text-align:center;
 	margin:5%;
 	position:relative;
 	
+	font-family:'Roboto';
 }
 .BlackHR{
 	border:1px solid black;
@@ -132,7 +168,7 @@ Content
 }
 
 .LeftMenuListItem{
-	
+	border:1px solid black;
 	width:90%;
 	margin:5%;
 	background-color:;
@@ -142,11 +178,19 @@ Content
 }
 .LeftMenuListItem:hover{
 	border-color:#FFEC19;
-	border-width:1px;
+	border:1px solid red;
 	border-radius:5px;
 	color:#FF0000;
 	background-color:#FFEC19;
 	font-weight:bold;
+}
+.LeftMenuListItemSelected{
+	border:1px solid black;
+	width:90%;
+	margin:5%;
+	background-color:red;
+	overflow-wrap: break-word;
+	color:white;
 }
 
 #TopHeaderSVG{
@@ -161,7 +205,8 @@ Content
 	border:1px solid blue;
 }
 .LeftMenuListItemText{
-	left:100;
+position:relative;
+	left:10%;
 	width:80%;
 	top:0%;
 	bottom:0%;
@@ -183,6 +228,8 @@ Content
 
   
 }
+.QuestionText{background-color:gray; padding:2%}
+.SolutionText{padding:2%;}
 #LeftMenuButton:hover{
 	  border:1px solid gray;
   border-radius:2px;
@@ -230,16 +277,17 @@ Content
 body::-webkit-scrollbar{
 	width:0;
 }
+.overflowdiv{overflow-x:auto;}
+.overflowdiv::-webkit-scrollbar{width: 0.02px;}
 #LeftDiv::-webkit-scrollbar,#MainContent::-webkit-scrollbar,#MainContentEnlarged::-webkit-scrollbar {
   width: 0.5em;
 }
  
-#LeftDiv::-webkit-scrollbar-track,#MainContent::-webkit-scrollbar-track,#MainContentEnlarged::-webkit-scrollbar-track,body::-webkit-scrollbar-track {
+.overflowdiv::-webkit-scrollbar-track,#LeftDiv::-webkit-scrollbar-track,#MainContent::-webkit-scrollbar-track,#MainContentEnlarged::-webkit-scrollbar-track,body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px yellow;
 }
  
-#LeftDiv::-webkit-scrollbar-thumb,#MainContent::-webkit-scrollbar-thumb,#MainContentEnlarged::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb {
+.overflowdiv::-webkit-scrollbar-thumb,#LeftDiv::-webkit-scrollbar-thumb,#MainContent::-webkit-scrollbar-thumb,#MainContentEnlarged::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb {
   background-color: red;
-  outline: 1px solid red;
 }
 
