@@ -1,54 +1,61 @@
- 
-/*
-ScrollBar
-*/
 
-/*
-Content
-
-*/
-#YouTubeSolution{position:fixed;height:40%;bottom:2%;right:2%;border:0.5px solid black;}
-@media screen and (max-width: 400px){
-	#YouTubeSolution{bottom:2%;height:32%;width:96%;right:2%;}
+#youtubecontainerdiv{
+	position: relative;
+	margin-top: -3%;
+	height: 75%;
+	width: 114%;
+	margin-left:-7%;
+	background-color: black;
 }
-#videoWrapper {
-	padding-bottom:62.25%;
-}
-#videoWrapper iframe{
-	
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.VideoSolutionButton{
-	padding:3%;
-	background-color:yellow;
-	text-align:center;
-	color:black;
-}
-
-.VideoSolutionButton:hover{
-	border:1px solid black;
-}
-
-
-#MainContent {
-    font-family: 'Roboto', sans-serif;font-size: 19px;
-	padding:2%;
+#youtubecontainerdivenlarged{
 	position: absolute;
-	left:20%;
+	width: 100%;
 	
+}
+#topicdiv{
+	font-size:34px; font-family: OpenSans-Light, OpenSans, Arial, sans-serif; 
+}
+#youtubeframe{
+	position: absolute;
+	height: 100%;
+	width:100% ;
+	margin: auto;
+}
+#MiniContent{
+	padding: 3%;
+    color: #373A3C;
+    font-size: 15px;
+    font-family:'OpenSans',Arial,sans-serif;
+}
+#topicdiv{
+	padding:0px 0px 0px 10px;
+	border-bottom: 1px solid gray;
+	font-size:34px; font-family: OpenSans-Light, OpenSans, Arial, sans-serif;
+	margin-top:15px;
+}
+.topicdiv1{
+	padding:0px 0px 0px 10px;
+	border-bottom: 1px solid gray;
+	font-size:28px; font-family: OpenSans-Light, OpenSans, Arial, sans-serif;
+	margin-top:15px;
+
+}
+#MainContent {
+	font-family: 'Roboto', sans-serif;
+	padding:2% 5% 4% 5%;
+	font-size: 17px;
+	position: absolute;
+	left:245px;
 	height:100%;
 	overflow:scroll;
-	width:80%;
+	right:0%;
 }
 
 #MainContentEnlarged{
 	position:absolute;
 	width:100%;
 	font-family: 'Roboto', sans-serif;
-	font-size: 22px;
+	font-size: 20px;
 	padding:2%;
 	overflow:scroll;
 	height:100%;
@@ -56,7 +63,7 @@ Content
 }
 @media screen and (min-width: 900px){
 #LeftDiv{
-	width:20%;
+	width:245px;
 	position:absolute;
 	background-color:#ffff66;
 	height:100%;
@@ -69,7 +76,7 @@ Content
 @media screen and (max-width: 900px){
 	#LeftMiniContent{font-size:15px;}
 	#LeftDiv{
-	width:20%;
+	width:245px;
 	position:absolute;
 	background-color:#ffff66;
 	height:100%;
@@ -83,8 +90,14 @@ Content
 	.LeftMenuListItemText{font-size:15px;text-align:center;}
 #MainContent{font-size: ;}
 }
-
+@media screen and (min-width: 700px){
+	#Main{height:90%;}
+	#TopHeader{height:10%;}
+}
 @media screen and (max-width: 700px) {
+	#youtubecontainerdiv{	width: 104%;
+		height: 60%;
+		margin-left:-2%;}
 	#LeftMiniContent{font-size:25px;}
 	.LeftMenuListItemText{font-size:25px;text-align:center;}
   #MainContent {
@@ -93,10 +106,11 @@ Content
   margin: 1px 1px 1px; padding:2%; font-size: ;
   order:1;
   }
-  #MainContentEnlarged{}
- 
+  #MainContentEnlarged{font-size: 12px;}
+ #Main{height:92%;}
+ #TopHeader{height:8%;}
   #BigContent{font-size: 25px;}
-  #LeftDiv{width:100%;
+  #LeftDiv{width:245px;
   position:absolute;
 	background-color:#ffff66;
 	display:hidden;
@@ -107,7 +121,7 @@ Content
 #TopHeader{
 	position:relative;
 	background-color:;
-	height:10%;
+	/* height:10%; */
 	border-bottom:1px solid gray;
 }
 #Main{
@@ -122,6 +136,20 @@ Content
 	position:relative;
 	text-align:center;	
 }
+#LeftDiv{
+	z-index:1;
+}
+#GreySpace{
+	z-index: 1;
+	position: absolute;
+	z-index:1;
+	height:100%;
+	left: 245px;
+	display:none;
+	opacity:0.5;
+	right: 0px;
+	background-color: #373A3C;
+}
 
 #HeaderLogo{display:relative;
 	width:40%;
@@ -134,9 +162,8 @@ Content
 
 }
 
-#HeaderLogoText{border:1px solid black;
-/* 	display:flex;
-	justify-content:center; */
+#HeaderLogoText{
+	border:1px solid black;
 	align-items:center;
 	position:relative;
 	height:100%;
@@ -144,13 +171,6 @@ Content
 	font-family:'Roboto';
 	margin-left:1%;
 }
-/* #HeaderLogoText p{
-	 margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
 #LeftMiniContent{
 	text-align:center;
 	margin:5%;
@@ -204,22 +224,6 @@ Content
 	fill:blue;
 	border:1px solid blue;
 }
-.LeftMenuListItemText{
-position:relative;
-	left:10%;
-	width:80%;
-	top:0%;
-	bottom:0%;
-	font-family:'Roboto';
-	/* font-size:22; */
-}
-.LeftMenuListItemIcon{
-	position:relative;
-	width:30;
-	height:30;
-
-}
-/* LeftMenuButtonStuff*/
 #LeftMenuButton {
   position:absolute;
   height:90%;
@@ -240,40 +244,11 @@ position:relative;
 	border-radius:2px;
 }
 
-
-/* #LeftMenuButtonImage{
-	position:relative;
-	height:100%;
-}
-.LeftMenuButton span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.LeftMenuButton span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.LeftMenuButton:hover span {
-  padding-right: 25px;
-}
-
-.LeftMenuButton:hover span:after {
-  opacity: 1;
-  right: 0;
-} */
 #MainContentEnlarged,#LeftDiv,#MainContent,body{
 	overflow-x:hidden;
 	
 }
-/* Hide scrollbar for Chrome, Safari and Opera */
+
 body::-webkit-scrollbar{
 	width:0;
 }
@@ -291,3 +266,53 @@ body::-webkit-scrollbar{
   background-color: red;
 }
 
+.LessonHead{
+    cursor: pointer;
+    width: 192px;
+    height: 32px;
+    padding: 6px 24px;
+    color:#000000DE;
+    font-size: 14px;
+    font-family:OpenSans,Arial,sans-serif;
+}
+.LessonItem{
+    width: 240px;
+    padding: 8px 24px 8px 18px;
+    position: relative;
+}
+.LessonItem:hover{
+    background: #F7F7F7;
+}
+.LessonItemIconContainer{
+    position: relative;
+    width:32px;
+
+}
+.LessonItemIcon{
+    position: absolute;
+    width:20px;
+    height:20px;
+}
+.LessonItemTextContainer{
+    position: relative;
+    left:32px;
+    width:160px;
+    background-color:;
+}
+.LessonItemText{
+    color: #373A3C;
+    font-size: 12px;
+    font-family:'OpenSans',Arial,sans-serif;
+}
+.LessonItemSubText{
+    margin:2px 0px 0px;
+    color: #6B6B6B;
+    font-size: 12px;
+    font-family:'OpenSans',Arial,sans-serif;
+}
+.LessonProgress{
+    width:50%;
+    height:5px;
+    background-color: red;
+    position: relative;
+}
