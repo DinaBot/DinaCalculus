@@ -65,7 +65,7 @@
 #LeftDiv{
 	width:245px;
 	position:absolute;
-	background-color:#ffff66;
+	background-color:;
 	height:100%;
 	bottom:0%;
 	overflow:scroll;
@@ -78,7 +78,7 @@
 	#LeftDiv{
 	width:245px;
 	position:absolute;
-	background-color:#ffff66;
+	background-color:white;
 	height:100%;
 	bottom:0%;
 	overflow:scroll;
@@ -112,7 +112,7 @@
   #BigContent{font-size: 25px;}
   #LeftDiv{width:245px;
   position:absolute;
-	background-color:#ffff66;
+	background-color:white;
 	display:hidden;
 	bottom:0%;
 	overflow:scroll;
@@ -187,31 +187,6 @@
 	
 }
 
-.LeftMenuListItem{
-	border:1px solid black;
-	width:90%;
-	margin:5%;
-	background-color:;
-	text-align:center;
-	overflow-wrap: break-word;
-
-}
-.LeftMenuListItem:hover{
-	border-color:#FFEC19;
-	border:1px solid red;
-	border-radius:5px;
-	color:#FF0000;
-	background-color:#FFEC19;
-	font-weight:bold;
-}
-.LeftMenuListItemSelected{
-	border:1px solid black;
-	width:90%;
-	margin:5%;
-	background-color:red;
-	overflow-wrap: break-word;
-	color:white;
-}
 
 #TopHeaderSVG{
 	position:absolute;
@@ -259,7 +234,7 @@ body::-webkit-scrollbar{
 }
  
 .overflowdiv::-webkit-scrollbar-track,#LeftDiv::-webkit-scrollbar-track,#MainContent::-webkit-scrollbar-track,#MainContentEnlarged::-webkit-scrollbar-track,body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px yellow;
+  box-shadow: ;
 }
  
 .overflowdiv::-webkit-scrollbar-thumb,#LeftDiv::-webkit-scrollbar-thumb,#MainContent::-webkit-scrollbar-thumb,#MainContentEnlarged::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb {
@@ -281,7 +256,7 @@ body::-webkit-scrollbar{
     position: relative;
 }
 .LessonItem:hover{
-    background: #F7F7F7;
+    background: #FFFF66;
 }
 .LessonItemIconContainer{
     position: relative;
